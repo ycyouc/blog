@@ -40,7 +40,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-// 这两个位置有问题*****************
+
 // 配置验证 token 接口
 app.use(jwt({
   secret: md5(process.env.JWT_SECRET), // 我们所设置的秘钥
